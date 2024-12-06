@@ -27,3 +27,4 @@
 /media/kali/College/Level_4/Semester_1/PL3/Section/project_test2/project_name/obj/Debug/net9.0/project_name.pdb
 /media/kali/College/Level_4/Semester_1/PL3/Section/project_test2/project_name/obj/Debug/net9.0/project_name.genruntimeconfig.cache
 /media/kali/College/Level_4/Semester_1/PL3/Section/project_test2/project_name/obj/Debug/net9.0/ref/project_name.dll
+/media/kali/College/Level_4/Semester_1/PL3/Section/project_test2/project_name/obj/Debug/net9.0/project_name.sourcelink.json
