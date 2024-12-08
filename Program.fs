@@ -42,6 +42,6 @@ let main argv =
         getWordCount inputText              // number of the words
         getSentenceCount inputText          // number of the sentences
         getParagraphCount inputText         // lenght of the paragraphs
-        getWordFrequency inputText
+        getWordFrequency inputText    
         
     0
