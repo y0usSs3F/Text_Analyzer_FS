@@ -1,9 +1,5 @@
 ﻿open System
 
-// Character length
-let getInputAndDisplayLength (inputText: string) =
-    printfn "The length of the input text is: %d" inputText.Length
-
 // Number of words
 let getWordCount (inputText: string) =
     let words = inputText.Split([|' '; '\t'; '\n'; '\r'|], StringSplitOptions.RemoveEmptyEntries)
@@ -38,7 +34,6 @@ let main argv =
     | null | "" ->
         printfn "No input provided."
     | _ ->
-        getInputAndDisplayLength inputText  // lenght of the characters
         getWordCount inputText              // number of the words
         getSentenceCount inputText          // number of the sentences
         getParagraphCount inputText         // lenght of the paragraphs
