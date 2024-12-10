@@ -32,7 +32,7 @@ let main argv =
     let inputText = Console.ReadLine()
     match inputText with
     | null | "" ->
-        printfn "No input provided."
+        printfn "No input provided, please provide an input."
     | _ ->
         getWordCount inputText              // number of the words
         getSentenceCount inputText          // number of the sentences
