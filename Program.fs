@@ -38,7 +38,7 @@ let getMostFrequentWords (inputText: string) =
     printfn "Most frequently used words:"
     frequency |> Array.take 5 |> Array.iter (fun (word, count) -> printfn "%s: %d" word count)
 
-// Function to calculate text readability (average sentence length)
+// Calculate Text Readability ----> (average sentence length)
 let getReadability (inputText: string) =
     let sentences = inputText.Split([|'.'; '!'; '?'|], StringSplitOptions.RemoveEmptyEntries)
     let words = inputText.Split([|' '; '\t'; '\n'; '\r'|], StringSplitOptions.RemoveEmptyEntries)
