@@ -26,6 +26,7 @@ let getWordFrequency (inputText: string) =
     printfn "Word frequencies:"
     frequency |> Array.iter (fun (word, count) -> printfn "%s: %d" word count)
 
+// Calculate frequency of most words have been used
 let getMostFrequentWords (inputText: string) =
     let words = inputText.Split([|' '; '\t'; '\n'; '\r'; '.'; ','; ';'; ':'; '!'; '?'|], StringSplitOptions.RemoveEmptyEntries)
     let frequency =
@@ -50,6 +51,6 @@ let main argv =
         getSentenceCount inputText          // number of the sentences
         getParagraphCount inputText         // lenght of the paragraphs
         getWordFrequency inputText          // Frequency of the words
-        getMostFrequentWords inputText
+        getMostFrequentWords inputText      // Frequency of most words used
                 
     0
