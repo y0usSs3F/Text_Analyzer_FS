@@ -26,6 +26,18 @@ let getWordFrequency (inputText: string) =
     printfn "Word frequencies:"
     frequency |> Array.iter (fun (word, count) -> printfn "%s: %d" word count)
 
+let getMostFrequentWords (inputText: string) =
+    let words = inputText.Split([|' '; '\t'; '\n'; '\r'; '.'; ','; ';'; ':'; '!'; '?'|], StringSplitOptions.RemoveEmptyEntries)
+    let frequency =
+        words
+        |> Array.map (fun w -> w.ToLowerInvariant())
+        |> Array.groupBy id
+        |> Array.map (fun (word, occurrences) -> word, occurrences.Length)
+        |> Array.sortByDescending snd
+    printfn "Most frequently used words:"
+    frequency |> Array.take 5 |> Array.iter (fun (word, count) -> printfn "%s: %d" word count)
+
+
 [<EntryPoint>]   // Entry Point that the program will start from.
 let main argv =
     printf "Please enter some text: "
@@ -38,5 +50,6 @@ let main argv =
         getSentenceCount inputText          // number of the sentences
         getParagraphCount inputText         // lenght of the paragraphs
         getWordFrequency inputText          // Frequency of the words
+        getMostFrequentWords inputText
                 
     0
