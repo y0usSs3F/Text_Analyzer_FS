@@ -54,12 +54,12 @@ let buildTextAnalysisApp () =
     buttonPanel.FlowDirection <- FlowDirection.LeftToRight
     form.Controls.Add(buttonPanel)
 
-    let loadButton = new Button(Text = "Put File", Width = 120, Height = 40, BackColor = Color.LightPink)
-    let analyzeButton = new Button(Text = "Make Analyies", Width = 120, Height = 40, BackColor = Color.LightGreen)
+    let loadButton = new Button(Text = "load File", Width = 120, Height = 40, BackColor = Color.LightPink)
+    let analyzeButton = new Button(Text = "Make Analysis", Width = 120, Height = 40, BackColor = Color.LightGreen)
     let saveButton = new Button(Text = "Save Results", Width = 120, Height = 40, BackColor = Color.LightYellow)
     let clearButton = new Button(Text = "Clear", Width = 120, Height = 40, BackColor = Color.Orange)
 
-    buttonPanel.Controls.AddRange([| loadButton; analyzeButton; saveButton; clearButton |])
+    buttonPanel.Controls.AddRange([| loadButton; saveButton; analyzeButton; clearButton |])
 
     let resultTextBox = new RichTextBox(
         Multiline = true,
