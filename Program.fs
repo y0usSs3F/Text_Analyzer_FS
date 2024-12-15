@@ -1,4 +1,7 @@
 ﻿open System
+open System.IO
+open System.Windows.Forms
+open System.Drawing
 
 // Helper to split text by delimiters
 let splitText (inputText: string) (delimiters: char[]) =
